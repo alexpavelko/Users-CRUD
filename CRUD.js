@@ -87,6 +87,18 @@ function createRequestBody(){
 }    
 
 
+function AddUserRequest(type,url){
+    formValidate();
+    let body = createRequestBody();
+    if (body != null){
+    let xhr = new XMLHttpRequest();
+    xhr.open(type, url);
+    xhr.setRequestHeader('Content-Type','application/json');
+    xhr.send([body]);
+    }
+}
+
+
 
 function GetAllUsersRequest(){
     var xhr = new XMLHttpRequest();
