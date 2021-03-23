@@ -7,3 +7,7 @@ var table =  document.querySelector('#mainTable');
 var btnUpdate = document.querySelector("#btn-update");
 form.style.display = 'none'; 
 
+userPassword.addEventListener('input',() => {
+    userPassword.value = userPassword.value.replace(/[а-я]/gi,'');
+});
+
