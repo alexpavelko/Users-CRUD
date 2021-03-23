@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users Controller</title>
+    <link rel="shortcut icon" href="res/0.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+  <header> 
+    <img src="res/logo.png"  class="logo" alt="logo">
+    <nav>
+      <ul class="nav__links">
+        <li><a href="#" id="btn-sign-in">Add user</a></li> 
+        <li><a href="help.html">Help</a></li> 
+        <li><a href="#"  id="btn-exit">Exit</a></li>            
+      </ul>
+    </nav>
+  </header>
+
+  <table class="table table-hover" id="mainTable"> 
+    <thead>
+      <th>ID</th>
+      <th>First Name</th>
+      <th>Last Name</td>
+      <th>Password</th>
+      <th>Birthday</td>
+      <th>Picture</th>
+      <th>Registered</th>
+      <th>Update</th>
+      <th>Remove</th>
+    </thead>
+    <tbody></tbody>
+  </table>
+   
+    <form id="form-Add-User" action="">
+      
+      <div class="main">
+        <div class="field">
+           <label id="lblFname" for="userFName">First Name</label><input type="text" placeholder="Your name.." id="userFName" required><br> <span id="spanFname" class="validity"></span>      
+        </div>
+        <div class="field">
+          <label id="lblLname" for="userLName">Last Name</label><input type="text" placeholder="Your last name.." id="userLName" required><br> <span id="spanLname" class="validity"></span>         
+        </div>
+        <div class="field">
+          <label id="lblPass" for="userPass">Password</label> <input type="password" placeholder="Your password.." id="userPass" required> <br><span id="spanPass" class="validity"></span>      
+        </div>
+        <div class="field">
+         <label id="lblBday" for="birthDay">Birthday  </label><input type="date" onkeydown="return false" value="2000-01-01" min="1900-01-01" max="2015-01-01" id="userBDay" required>
+        </div>
+        <div class="field">
+          <label id="lblPickture" for="userPicture">Picture</label><input type="file" id="userPicture">
+        </div>
+        
+     </div>
+    
+    </form>
+      
+    <input type="button" value="Create user" id="btn-submit"> 
+    <input type="button" value="Update" id="btn-update">       
+   
+      <script type="text/javascript" src="CRUD.js"></script>
+</body>
+</html> 
