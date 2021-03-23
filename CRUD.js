@@ -98,7 +98,16 @@ function AddUserRequest(type,url){
     }
 }
 
-
+function UpdateUserRequest(type, url){
+    formValidate();
+    let body = createRequestBody();
+    if (body != null){
+    let xhr = new XMLHttpRequest();
+    xhr.open(type, url);
+    xhr.setRequestHeader('Content-Type','application/json');
+    xhr.send([body]);     
+    }
+}
 
  function DeleteUserRequest(type,url){ 
     let xhr = new XMLHttpRequest();
