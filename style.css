@@ -1,0 +1,112 @@
+*{
+    padding: 0;
+    margin:0;
+    background-color: #24252a;
+    color:white;
+}
+
+.field {clear:both; margin-left: 20px;}
+
+#btn-submit{
+    display: none;
+}
+
+#form-Get-User{
+    display: none;
+}
+
+#btn-update{
+    display: none;
+}
+
+header img{
+    width: 64px;
+}
+header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+.logo{
+    cursor: pointer;
+}
+
+.nav__links{
+    list-style:none;
+}
+
+.nav__links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav__links li a{
+    transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover{
+    color:#0088a9;
+}
+
+input[type=text], input[type=password], input[type=date]{
+    margin-bottom: 10px;
+    width: 99%;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+input[type=button]{  
+   
+ 
+    border: 1px solid white;
+    width: 100px;
+    height: 35px;   
+}
+
+input[type=button]:hover{
+    color:#0088a9;
+}
+
+label {
+    padding: 12px 212px 12px 0;
+    display: inline-block;
+}
+
+
+
+td
+{
+	width: 20%;
+	padding: 10px;
+	background-color:#db545a;
+	border: 1px solid #a5bbe0;
+	font-family: "verdana","sans-serif";
+	font-size: 13px;
+}
+
+th
+{
+	width: 50px;
+	padding: 10px;
+	background-color: black;
+	border: 1px solid #a5bbe0;
+	font-family: "verdana","sans-serif";	
+}
+
+.help{
+    border: 1px solid white;
+    margin: 20%;
+    font-size: 14px;
+    font-family: "verdana","sans-serif";
+    background-color: #24252a;
+    color: white;
+}
+.help a{
+    color:#0088a9;
+    font-size: 20px;
+}
