@@ -64,6 +64,29 @@ function formValidate(){
     }); 
 }
 
+function createRequestBody(){
+    let spanFirstName =  document.querySelector('#spanFname');
+    let spanLastName =  document.querySelector('#spanLname');
+    let spanPassword =  document.querySelector('#spanPass');
+    if(spanFirstName.innerHTML == '✓' && spanLastName.innerHTML == '✓' && spanPassword.innerHTML == '✓' ){
+          
+        let registered = new Date();
+        let picture = null;
+        let body = JSON.stringify({
+        firstName: firstName.value,
+        lastName: lastName.value,
+        password:   userPassword.value,
+        birthDate:  birthDate.value,
+        registered:  registered,
+        picture:  picture
+    });
+    window.location.reload();
+    form.style.display = 'none';
+    return body;
+    }
+}    
+
+
 
 function GetAllUsersRequest(){
     var xhr = new XMLHttpRequest();
