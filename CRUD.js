@@ -100,6 +100,13 @@ function AddUserRequest(type,url){
 
 
 
+ function DeleteUserRequest(type,url){ 
+    let xhr = new XMLHttpRequest();
+    xhr.open(type, url);
+    xhr.setRequestHeader('Content-Type','application/json');
+    xhr.send(); 
+}
+
 function GetAllUsersRequest(){
     var xhr = new XMLHttpRequest();
     
