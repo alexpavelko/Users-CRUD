@@ -20,7 +20,6 @@ btnRegNewUser.addEventListener('click',()=>{
     let url = "http://localhost:56481/api/Users";
     
     AddUserRequest(type,url);
-    window.location.reload(); 
 });
 
 var btnAddUser = document.querySelector("#btn-sign-in");
@@ -40,6 +39,30 @@ appExit.addEventListener('click',() =>{
 
 
 
+function formValidate(){
+    firstName.maxLength = 20;
+    lastName.maxLength = 20;
+    userPassword.maxLength = 20;
+ 
+    let firstNameInput = {  value: firstName.value,size: 5, label: document.querySelector("#lblFname"),span:document.querySelector("#spanFname")};
+    let lastNameInput = {  value: lastName.value,size: 5, label: document.querySelector("#lblLname"),span:document.querySelector("#spanLname")}
+    let PasswordInput = {  value: userPassword.value,size: 8, label: document.querySelector("#lblPass"),span:document.querySelector("#spanPass")};
+
+    let inputs = [firstNameInput,lastNameInput,PasswordInput];
+    
+    inputs.forEach(function(obj, index){   
+     
+    if(obj.value.length<obj.size){   
+        obj.span.style.color = "red";   
+        let text = (`✖ ${obj.label.innerHTML} должен быть длинее ${obj.size-1} символов!`);
+        obj.span.innerHTML = text;  
+        }
+        else{          
+            obj.span.innerHTML = '✓';
+            obj.span.style.color = "green";   
+        }         
+    }); 
+}
 
 
 function GetAllUsersRequest(){
@@ -93,7 +116,7 @@ function GetAllUsersRequest(){
                 let url = `http://localhost:56481/api/Users/${userID}`;
                 DeleteUserRequest(userID);         
                 UpdateUserRequest(type, url);
-               
+                window.location.reload();
             });           
         });
 
